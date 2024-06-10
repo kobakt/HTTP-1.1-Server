@@ -1,0 +1,1 @@
+document.getElementById("demo").innerHTML = "This was loaded dynamically by a separate JS file!";
