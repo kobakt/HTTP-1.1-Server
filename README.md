@@ -1,31 +1,33 @@
 # HTTP 1.1 Server
 
-A multithreaded web server that implements the HTTP 1.1 standard. Designed for Linux.
+This project is a multithreaded web server that implements the HTTP 1.1 standard designed for Linux. It was created as a student project to better understand the web and HTTP. The project also gave a clearer understanding of HTTP server design and implementation.
 
-Created as a student project.
+## Features
 
-## Multithreaded
+### Multithreaded
 
-The server is multithreaded and able to handle multiple concurrent requests. This was acheived by using a thread pool.
+The server can handle multiple concurrent requests. This was acheived using a thread pool to keep the server performant and easily scalable.
 
-## Client
+### CGI Script Support
 
-Browsers, telnet, and netcat can all be used to send and receive HTTP requests. Additionally, a provided client program can be used to interact with the server as well.
+The server has support for CGI scripts. Parameters are passed as environment variables enabling different scripts to be used seamlessly.
 
-## Security
+### Client Compatability
 
-URL parsing is used to prevent dot-dot-slash attacks.
+The server can interact seemlessly with different clients including browsers, telnet, and netcat. Additionally, a provided client program can be used to interact with the server as well.
+
+### Security
+
+As a security measure, URL parsing is used to prevent dot-dot-slash attacks. 
 
 ## Limitations
 
-Does not fully implement the HTTP 1.1 standard, but can still be used with browsers nonetheless.
-
-As a student project under tight time constraints, the projects code is not thoroughly clear, tested, and bug free.
+The server does not fully implement the HTTP 1.1 standard. However it is still compatible with browsers. As a student project under tight time constraints, there may be areas that lack clarity, thorough testing, and could potentially contain bugs.
 
 ## Future Goals
 
-* Use C++ regular expressions to create clearer, more reliable text parsing.
+* Implement text parsing using C++ regular expressions to create clearer, more reliable code.
 
-* Add unit tests to ensure reliability.
+* Add unit tests to ensure the reliability and robustness of the server.
 
-* Fully implement the HTTP 1.1 standard.
+* Fully implement the HTTP 1.1 standard to improve compatibility and functionality.
